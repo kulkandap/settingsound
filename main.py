@@ -1,22 +1,27 @@
-# Code from https://www.pygame.org/docs/
+# Magic Type
 
 import pygame
+from display import *
+from background import *
 
 # pygame setup
 pygame.init()
-pygame.display.set_caption("Falling Grades")
-screen = pygame.display.set_mode((1280, 720))
+screen = pygame.display.set_mode((screen_length, screen_width), pygame.FULLSCREEN)
 clock = pygame.time.Clock()
+title = pygame.display.set_caption("Debian")
 running = True
 dt = 0
-surface = pygame.Surface((100, 100))
-player_position = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
 while running:
-    # Exit the game
+    # poll for events
+    # pygame.QUIT event means the user clicked X to close your window
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+
+    # fill the screen with Monument Valley
+    screen.fill((0, 0, 0))
+    screen.blit(valley, (0, 0))
 
     # flip() the display to put your work on screen
     pygame.display.flip()
