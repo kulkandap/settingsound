@@ -8,7 +8,7 @@ from background import *
 pygame.init()
 screen = pygame.display.set_mode((screen_length, screen_width))
 clock = pygame.time.Clock()
-title = pygame.display.set_caption("Debian")
+title = pygame.display.set_caption("Magic Type")
 running = True
 dt = 0
 
@@ -20,7 +20,7 @@ while running:
             running = False
     # fill the screen with Monument Valley
     screen.fill((0, 0, 0))
-    screen.blit(valley, (0, 0))
+    screen.blit(bg, (0, 0))
 
     # flip() the display to put your work on screen
     pygame.display.flip()
