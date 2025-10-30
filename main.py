@@ -1,7 +1,10 @@
 # Magic Type
 
 import pygame
-from background import *
+import main_menu
+import score
+import character
+import background
 
 # pygame setup
 pygame.init()
@@ -19,11 +22,11 @@ while running:
 
     # fill background with a fhd picture 
     screen.fill((0, 0, 0))
-    screen.blit(bg, (0, 0))
+    screen.blit(background.softmountain, (0, 0))
 
     # flip() the display to put your work on screen
     pygame.display.flip()
-
+    pygame.display.update()
     # limits FPS to 60
     # dt is delta time in seconds since last frame, used for framerate-
     # independent physics.
